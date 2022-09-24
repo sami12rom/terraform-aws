@@ -3,34 +3,34 @@ variable "aws_region" {
   default     = "eu-central-1"
 }
 
-variable "aws_tags" {
-    type = map
-    default = {
-        Hashicorp-Learn = "aws-iam-policy"
-    }
+variable "profile" {
+  description = "The AWS region to create things in."
+  type        = string
 }
 
-variable "account_id" {
-  description = "The AWS region to create things in."
-  type = string
+variable "aws_tags" {
+  type = map(any)
+  default = {
+    Hashicorp-Learn = "aws-iam-policy"
+  }
 }
 
 variable "lambda_role_arn" {
   description = "The AWS region to create things in."
-  type = string
+  type        = string
 }
 
 variable "s3_bucket_name" {
   description = "The name of the S3 bucket."
-  type = string
+  type        = string
 }
 
 variable "aws_subnets" {
   description = "The VPC subnets"
-  type = list
+  type        = list(any)
 }
 
 variable "aws_security_group" {
   description = "The aws_security_group"
-  type = list
+  type        = list(any)
 }
