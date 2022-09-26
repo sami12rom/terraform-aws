@@ -7,8 +7,3 @@ provider "aws" {
     tags = var.aws_tags
   }
 }
-
-module "s3" {
-  source = "value"
-
-}
