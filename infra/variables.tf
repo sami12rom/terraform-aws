@@ -12,7 +12,12 @@ variable "profile" {
 variable "aws_tags" {
   type = map(any)
   default = {
-    Hashicorp-Learn = "aws-iam-policy"
+    Hashicorp-Learn    = "aws-terraform"
+    Owner              = "cloud"
+    ManagedBy          = ""
+    DataClassification = "dc3"
+    Environment        = "Test"
+    Domain             = ""
   }
 }
 
@@ -20,12 +25,6 @@ variable "lambda_role_arn" {
   description = "The AWS region to create things in."
   type        = string
   default     = "value"
-}
-
-variable "s3_bucket_name" {
-  description = "The name of the S3 bucket."
-  type        = string
-  default     = "acc-landing-dc1-bucket"
 }
 
 variable "aws_subnets" {

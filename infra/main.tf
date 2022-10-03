@@ -7,3 +7,15 @@ provider "aws" {
     tags = var.aws_tags
   }
 }
+/*
+module "s3_bucket" {
+  source      = "../modules/S3"
+  bucket_name = "inl-acc-trial3"
+}*/
+
+
+module "aws_glue" {
+  source                = "../modules/glue"
+  catalog_database_name = "trial"
+
+}
